@@ -10,13 +10,13 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 
 //'application/json;charset=utf-8';//
 if (process.env.NODE_ENV == 'development') {
-    axios.defaults.baseURL = 'http://127.0.0.1:9991/';
+    axios.defaults.baseURL = 'http://localhost:9991/';
 }
 else if (process.env.NODE_ENV == 'debug') {
-    axios.defaults.baseURL = 'http://127.0.0.1:8990/';
+    axios.defaults.baseURL = 'http://localhost:1111/';
 }
 else if (process.env.NODE_ENV == 'production') {
-    axios.defaults.baseURL = 'http://132.232.2.109:9991/';
+    axios.defaults.baseURL = 'http://localhost:1111/';
 }
 let ipAddress = axios.defaults.baseURL;
 axios.interceptors.request.use((config) => {
